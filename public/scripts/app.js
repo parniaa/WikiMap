@@ -9,4 +9,4 @@ $(() => {
   });;
 });
 
-console.log('help karl!')
+console.log('help us karl!')
