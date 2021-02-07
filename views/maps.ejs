@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+  /* .shadow {
+  box-shadow: 5px 5px 3px lightgrey;
+} */
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <%- include('partials/nav')%>
+  </header>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+<div class="container text-center">    
+  <h3>Faviourite Places</h3><br>
+  <div class="row">
+    <div class="col-sm-6 shadow">
+      <img src="https://culinaryginger.com/wp-content/uploads/Mexican-Style-Hot-Dogs-picture-11-735x490.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p><h3>Best Hot Dos</h3></p>
+    </div>
+    <div class="col-sm-6 shadow">
+      <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80" class="img-responsive" style="width:100%" alt="Image">
+      <p><h3>Juicy Burgers</h3></p>
+    </div>
+
+  </div>
+    <div class="row">
+      <div class="col-sm-6 shadow">
+        <img src="https://culinaryginger.com/wp-content/uploads/Slow-Cooker-Shredded-Chicken-Banh-Mi-17.jpg" class="img-responsive" style="width:100%" alt="Image">
+        <p><h3>Best Hot Dos</h3></p>
+      </div>
+      <div class="col-sm-6 shadow">
+        <img src="https://culinaryginger.com/wp-content/uploads/Detox-Green-Smoothie-recipe-28.jpg" class="img-responsive" style="width:100%" alt="Image">
+        <p><h3>Best Hot Dos</h3></p>
+      </div>
+
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>

@@ -10,18 +10,19 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    let query = `SELECT * FROM maps`;
-    console.log(query);
-    db.query(query)
-      .then(data => {
-        const widgets = data.rows;
-        res.json({ widgets });
-      })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
+    // let query = `SELECT * FROM maps`;
+    // console.log(query);
+    // db.query(query)
+    //   .then(data => {
+    //     const maps = data.rows;
+    //     res.render("./views/maps.ejs")
+    //   })
+    //   .catch(err => {
+    //     res
+    //       .status(500)
+    //       .json({ error: err.message });
+    //   });
+    res.render("maps");
   });
   return router;
 };
