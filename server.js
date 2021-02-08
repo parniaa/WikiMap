@@ -35,11 +35,13 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
 const mapsRoutes = require("./routes/maps");
+const mapViewRoutes = require("./routes/map_view");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
 app.use("/api/maps", mapsRoutes(db));
+app.use("/api/maps/view", mapViewRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
 
@@ -53,6 +55,13 @@ app.get("/", (req, res) => {
 app.get("/api/maps/new", (req,res) => {
   res.render("map_new");
 })
+app.post('/api/map/view', (req, res) => {
+  const name = req.body;
+  const address = req.body;
+  const nameClient = document.getElementById("table-rows").value;
+  console.log(name, address, nameClient);
+  res.redirect("/api/maps/new");
+});
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
